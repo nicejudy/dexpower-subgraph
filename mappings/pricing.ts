@@ -11,7 +11,7 @@ export function getETHPriceInUSD(): BigDecimal {
   let usdtPair = Pair.load(WETH_USDT_PAIR); // usdt is token0
 
   if (usdtPair !== null) {
-    return usdtPair.token1Price;
+    return usdtPair.token0Price;
   } else {
     return ZERO_BD;
   }
